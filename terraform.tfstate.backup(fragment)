@@ -1,0 +1,38 @@
+{
+  "version": 4,
+  "terraform_version": "1.8.4",
+  "serial": 9,
+  "lineage": "cded4558-8d70-b4ee-21ad-33d54515c279",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "docker_container",
+      "name": "nginx",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "attach": false,
+            "bridge": "",
+            "capabilities": [],
+            "cgroupns_mode": null,
+            "command": [
+              "nginx",
+              "-g",
+              "daemon off;"
+            ],
+            "container_logs": null,
+            "container_read_refresh_timeout_milliseconds": 15000,
+            "cpu_set": "",
+            "cpu_shares": 0,
+            "destroy_grace_seconds": null,
+            "devices": [],
+            "dns": null,
+            "dns_opts": null,
+            "dns_search": null,
+            "domainname": "",
+            "entrypoint": [
+              "/docker-entrypoint.sh"
+            ],
