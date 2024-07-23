@@ -10,8 +10,17 @@
 ### Чек-лист готовности к домашнему заданию
 
 1. Скачайте и установите **Terraform** версии ~>1.8.4 . Приложите скриншот вывода команды ```terraform --version```.
+
+![terraform,docker,git version](https://github.com/user-attachments/assets/3b4841d2-a4cf-4c6c-b108-baa6cf5c7c3d)
+---
+   
 2. Скачайте на свой ПК этот git-репозиторий. Исходный код для выполнения задания расположен в директории **01/src**.
+
+   
 3. Убедитесь, что в вашей ОС установлен docker.
+
+![terraform,docker,git version](https://github.com/user-attachments/assets/4804b34a-a014-4161-afe9-cbf133d40898)
+---
 
 ------
 
