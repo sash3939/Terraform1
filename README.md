@@ -124,8 +124,20 @@ https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs/resources/ima
 ### Задание 2*
 
 1. Создайте в облаке ВМ. Сделайте это через web-консоль, чтобы не слить по незнанию токен от облака в github(это тема следующей лекции). Если хотите - попробуйте сделать это через terraform, прочитав документацию yandex cloud. Используйте файл ```personal.auto.tfvars``` и гитигнор или иной, безопасный способ передачи токена!
+
+![yandex-vm](https://github.com/user-attachments/assets/b585ce3e-cd45-4b6a-b3cf-f6fe61d00a11)
+---
+   
 2. Подключитесь к ВМ по ssh и установите стек docker.
+
+![docker yandex vm](https://github.com/user-attachments/assets/4ce9fa70-81ab-4b52-97de-52e8fb483fcc)
+---
+
+   
 3. Найдите в документации docker provider способ настроить подключение terraform на вашей рабочей станции к remote docker context вашей ВМ через ssh.
+
+https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs
+   
 4. Используя terraform и  remote docker context, скачайте и запустите на вашей ВМ контейнер ```mysql:8``` на порту ```127.0.0.1:3306```, передайте ENV-переменные. Сгенерируйте разные пароли через random_password и передайте их в контейнер, используя интерполяцию из примера с nginx.(```name  = "example_${random_password.random_string.result}"```  , двойные кавычки и фигурные скобки обязательны!) 
 ```
     environment:
@@ -136,7 +148,17 @@ https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs/resources/ima
       - MYSQL_ROOT_HOST="%"
 ```
 
-6. Зайдите на вашу ВМ , подключитесь к контейнеру и проверьте наличие секретных env-переменных с помощью команды ```env```. Запишите ваш финальный код в репозиторий.
+![main tf for yandex vm](https://github.com/user-attachments/assets/7470e3ba-4696-40f7-a71f-249e0be3a78a)
+---
+
+![init for yandex vm](https://github.com/user-attachments/assets/c0feee07-eb27-4e88-8ca7-6e5aca0ccd5d)
+---
+
+![terraform plan](https://github.com/user-attachments/assets/abe9939e-806c-47f4-968c-e6ef8018f0e7)
+---
+
+
+5. Зайдите на вашу ВМ , подключитесь к контейнеру и проверьте наличие секретных env-переменных с помощью команды ```env```. Запишите ваш финальный код в репозиторий.
 
 ### Задание 3*
 1. Установите [opentofu](https://opentofu.org/)(fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
